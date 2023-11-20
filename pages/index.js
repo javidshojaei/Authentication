@@ -102,6 +102,7 @@ export default function Home() {
       <div className="mx-auto my-9 w-[50%]">
         <form onSubmit={submitHandler} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
+            <p className="text-black mb-6">note : if you are located in Iran ,use VPN</p>
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
               Email
             </label>
