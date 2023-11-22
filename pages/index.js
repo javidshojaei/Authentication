@@ -1,9 +1,11 @@
 import { useState } from "react";
 import * as React from 'react';
+import Link from "next/link";
 
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
 
@@ -41,7 +43,7 @@ export default function Home() {
         } else {
           return res.json().then(data => {
             //show an error
-            console.log(data.error.message)
+            console.log(data)
             toast.error(data.error.message, {
               position: "top-center",
               autoClose: 3000,
@@ -68,6 +70,7 @@ export default function Home() {
         });
         console.log("Error:", error)
       })
+  
   }
 
   //forget password alert
@@ -85,7 +88,8 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="bg-white ltr">
+      <h1 className="text-black text-4xl  text-center">Home Page</h1>
       <ToastContainer
         style={{ width: '45%' }}
         position="top-center"
@@ -128,6 +132,7 @@ export default function Home() {
           &copy;2020 Acme Corp. All rights reserved.
         </p>
       </div>
+      <Footer/>
     </div>
   )
 }
